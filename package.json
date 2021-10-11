@@ -1,0 +1,22 @@
+{
+  "name": "morning_populate",
+  "version": "1.0.0",
+  "description": "Practice course MongoDB chapter 3 - populate method",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Dev-Ninja75/morning_populate.git"
+  },
+  "author": "Sofiane ABDEDOU",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dev-Ninja75/morning_populate/issues"
+  },
+  "homepage": "https://github.com/Dev-Ninja75/morning_populate#readme",
+  "dependencies": {
+    "mongoose": "^6.0.10"
+  }
+}
