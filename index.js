@@ -2,14 +2,28 @@ const http = require("http");
 const server = http.createServer();
 const mongoose = require("mongoose");
 
-// Importation des models `student`& `adresse`
+// Importation des models `student`& `address`
 const studentModel = require("./models/studentModel");
-const addressModel = require("./models/addressModel");
+// const addressModel = require("./models/addressModel");
 
-// Insertion en base de donnée de la collection `student`
+//tableau students
+
+const students = [
+  {
+    firstName: "Sofiane",
+    surname: "Dev-Ninja75"
+  },
+
+  {
+    firstName: "Amir",
+    surname: "Aydin"
+  }
+];
+
+// // Insertion en base de donnée de la collection `student`
 studentModel.insertMany(students).then(console.log).catch(console.error);
-// Insertion en base de donnée de la collection `adress`
-adressModel.insertMany(address).then(console.log).catch(console.error);
+// // Insertion en base de donnée de la collection `address`
+// addressModel.insertMany(address).then(console.log).catch(console.error);
 
 // Connection à MongoDB
 mongoose.connect("mongodb://localhost:27017/mongoose_populate", (error) => {
