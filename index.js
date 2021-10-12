@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const studentModel = require("./models/studentModel");
 const addressModel = require("./models/addressModel");
 
-// New address instance
+// New address instance...
 const address = new addressModel({
   streetName: "Rue de la poupée qui tousse",
   streetNumber: "12",
@@ -14,21 +14,19 @@ const address = new addressModel({
   city: "Paris City of luv",
 });
 
-// // Insertion en base de donnée de la collection `address`
-// address
-//   .save()
-//   .then((newAddress) => {
-//     // New student
-//     const student = new studentModel({
-//       firstName: "Sofiane",
-//       surname: "ABDEDOU",
-//       address: newAddress._id,
-//     })
-//     student.save()
-//     .then(console.log)
-//     .catch(console.log)
-//   })
-//   .catch(console.error);
+// Insertion en base de donnée de la collection `address`
+address
+  .save()
+  .then((newAddress) => {
+    // New student
+    const student = new studentModel({
+      firstName: "Sofiane",
+      surname: "ABDEDOU",
+      address: newAddress._id,
+    });
+    student.save().then(console.log).catch(console.log);
+  })
+  .catch(console.error);
 
 studentModel
   .findOne({ _id: "6164a92d12208e1df342f8ea" })
