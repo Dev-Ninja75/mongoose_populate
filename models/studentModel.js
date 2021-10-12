@@ -3,9 +3,9 @@ const mongoose = require("mongoose");
 const studentSchema = new mongoose.Schema({
   firstName: String,
   surname: String,
-  // adress: { type: mongoose.Types.ObjectId, ref: "Adress" }
+  address: { type: mongoose.Types.ObjectId, ref: "address" },
 });
 
-const studentModel = mongoose.model("Student", studentSchema);
+const studentModel = mongoose.model("Students", studentSchema);
 
 module.exports = studentModel;
